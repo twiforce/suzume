@@ -1,5 +1,17 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+    div.container-fluid.text-center
+        div.row
+            h1= title
+            p= subtitle
+        div.row
+            div.col-md-6.col-md-offset-3
+                div.input-group
+                    input(type="text" class="form-control" ng-model="searchBar" placeholder="type a tag and hit \"Search\"")
+                    span.input-group-btn
+                        a.btn.btn-default(href="/tag/{{searchBar}}") Search
+                div.row
+                    br
+                    p Currently serving #{totalImages} images.
+                        a(href="/image") View all of them

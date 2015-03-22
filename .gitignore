@@ -30,3 +30,8 @@ node_modules
 
 # PhpStorm files
 .idea
+
+# Vagrant files
+*~
+.DS_Store
+.vagrant
